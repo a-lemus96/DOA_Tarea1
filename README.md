@@ -27,4 +27,12 @@ To execute the program we run:
 
 again, being `n` and `m` the values of your preference.
 
-Once you run the script, the program first solves the problem for the input case in Sedgewick's book and then it generates a random test case for the parameters `-N` and `M` you specified. Here is a run of the script:
+Once you run the script, the program first solves the problem for the input case in Sedgewick's book and then it generates a random test case for the parameters `-N` and `M` you specified. Here is a run of the script for the quick-find solution, wich is the default method:
+
+![image](https://user-images.githubusercontent.com/95151624/221082321-a33b904a-059d-42e9-80f5-a81442ae94e8.png)
+
+And here is a testcase for the quick-union solution:
+
+![image](https://user-images.githubusercontent.com/95151624/221082651-f32948ed-dd2e-4379-b719-be8bfec1ebad.png)
+
+As you may have noticed, the program is able to stop once we reach `N-1` non-redundant connections.
