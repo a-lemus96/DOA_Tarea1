@@ -1,7 +1,7 @@
 # standard library
 import argparse
 import random
-from typing import Callable, List
+from typing import Callable, List, Tuple
 
 # config parser
 parser = argparse.ArgumentParser()
@@ -57,7 +57,8 @@ def quick_union(
         return False
 
 def solve_connectivity(
-        C: List[int],
+        A: List[int],
+        C: List[Tuple[int]],
         method: Callable) -> None:
     r""""""    
     count = 0 # counter for the number of connected components
@@ -74,7 +75,7 @@ def solve_connectivity(
             print(f"-{p, q}\t\t{A}")
 
         # check if all nodes are connected
-        if count >= args.N - 1:
+        if count >= len(A) - 1:
             print(f"\nGraph has already N - 1 connections. Stopping...")
             break
 
@@ -103,14 +104,14 @@ A = list(range(10))
 print(f"Initial sets of connected nodes:\n{A}\n")
 
 # solve connectivity problem for the first input
-solve_connectivity(C=C1, method=method)
+solve_connectivity(A=A, C=C1, method=method)
 
 # initialize list for the first test
 A = list(range(args.N))
 print(f"\nInitial sets of connected nodes:\n{A}\n")
 
 # solve connectivity problem for random input
-solve_connectivity(C=C2, method=method)
+solve_connectivity(A=A, C=C2, method=method)
 
 print("\n* denotes new connections")
 print("- denotes redundant connections")
